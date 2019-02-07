@@ -77,13 +77,20 @@ a[1:5, 1:5, 3, 3]
 Create a list representing the (simplified) primate taxonomy outlined below. HINT: you can use lists as elements in a list.
 
 ```{r}
-Haplorhini <- list(Anthropoidea=c("Platyrrhini", "Catarrhini"), Tarsioidea = ("Tarsiidae"))
-Haplorhini
+Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
+Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
+Platyrrhini
+Catarrhini
 ```
 
 ```{r}
-Anthropoidea <- list(Platyrrhini=c("Cebidae", "Atelidae", "Pitheciidae"), Catarrhini=c("Cercopithecidae", "Hylobatidae", "Hominidae"))
+Anthropoidea <- list(Platyrrhini=Platyrrhini, Catarrhini=Catarrhini)
 Anthropoidea
+```
+
+```{r}
+Haplorhini <- list(Anthropoidea=Anthropoidea, Tarsioidea = ("Tarsiidae"))
+Haplorhini
 ```
 
 ```{r}
@@ -92,7 +99,7 @@ Strepsirhini
 ```
 
 ```{r}
-Primates <- list(Haplorhini=Haplorhini, Anthropoidea=Anthropoidea, Strepsirhini=Strepsirhini)
+Primates <- list(Haplorhini=Haplorhini, Strepsirhini=Strepsirhini)
 Primates
 ```
 
