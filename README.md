@@ -1,6 +1,6 @@
-## MODULE 07
+## MODULE 07      
 
-***CHALLANGE-01***
+<span style="color:blue">***CHALLANGE-01:***</span>
 
 First, create a vector of 1 word character strings comprising the first line of the Gettysburg address: “Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.”
 
@@ -14,39 +14,43 @@ frase <- "Four score and seven years ago our fathers brought forth on this conti
 
 ``` {r}
 split <- c(str_split(frase, " ", simplify=TRUE))
+split
 ```
 
 ``` {r}
 splitfinal <- split[seq(from=1, to=30, by=3)]
+splitfinal
 ```
 
 ``` {r}
 gsub("[[:punct:]]","", splitfinal)
 ```
 
+<span style="color:blue">***CHALLANGE-02:***</span>
 
-***CHALLANGE-02***
-
-Given the matrix, `m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)`, above, extract the 2nd, 3rd, and 6th columns and assign them to the variable x
+Given the matrix, `m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)`, extract the 2nd, 3rd, and 6th columns and assign them to the variable x
 
 ```{r}
 m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 x <- m[ ,c(2,3,6)]
+x
 ```
 
 - Given the matrix, m, above, extract the 6th to 8th row and assign them to the variable x
 
 ```{r}
 x <- m[c(6:8), ]
+x
 ```
 
 - Given the matrix, m, above, extract the elements from row 2 to row 6, and column 6 to column 9 and assign them to the variable x
 
 ```{r}
 x <- m[c(2:6), c(6:9)]
+x
 ```
 
-***CHALLANGE-03***
+<span style="color:blue">***CHALLANGE-03:***</span>
 
 Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series)
 
@@ -68,36 +72,37 @@ a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
 ```
 
-
-***CHALLANGE-04***
+<span style="color:blue">***CHALLANGE-04:***</span>
 
 Create a list representing the (simplified) primate taxonomy outlined below. HINT: you can use lists as elements in a list.
 
-l <- list(Primates=c(v1, v9), list(v2, v7), Anthropoidea=c(v3, v5), Platyrrhini=v6)
+```{r}
+Primates <- list(Haplorhini= c("Anthropoidea", "Tarsioidea"), Strepsirhini= c("Lorisoidea", "Lemuroidea"))
+Primates
+```
 
-v0 <- ("Primates") 
-v1 <- ("Haplorhini") 
-v2 <- ("Anthropoidea")
-v3 <- ("Platyrrhini")
-v4 <- c("Cebidae", "Atelidae", "Pitheciidae")
-v5 <- ("Catarrhini")
-v6 <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
-v7 <- ("Tarsiodea") 
-v8 <- c("Tarsiidae") 
+```{r}
+Haplorhini <- list(Anthropoidea=c("Platyrrhini", "Catarrhini"), Tarsioidea = ("Tarsiidae"))
+Haplorhini
+```
 
-v9 <- ("Strepsirhini") 
-v10 <- ("Lorisoidea")
-v11 <- c("Lorisidae", "Galagidae") 
-v12 <- ("Lemuroidea") 
-v13 <- c("Cheirogaleidae", "Lepimuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+```{r}
+Anthropoidea <- list(Platyrrhini=c("Cebidae", "Atelidae", "Pitheciidae"), Catarrhini=c("Cercopithecidae", "Hylobatidae", "Hominidae"))
+Anthropoidea
+```
 
+```{r}
+Strepsirhini <- list(Lorisoidea=c("Lorisidae", "Galagidae"), Lemuroidea=c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae"))
+Strepsirhini
+```
 
-***CHALLANGE-05***
+<span style="color:blue">***CHALLANGE-05:***</span>
 
 Store the following numbers as a 5 x 3 matrix: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill the matrix ROWWISE.
 
 ```{r}
 a <- matrix(c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow=5, ncol=3, byrow=TRUE)
+a
 ```
 
 Then, do the following:
@@ -106,6 +111,7 @@ Coerce the matrix to a data frame.
 
 ```{r}
 b <- data.frame(a)
+b
 ```
 
 As a data frame, coerce the second column to be logical-valued (Boolean)
@@ -125,3 +131,4 @@ When you are done, use the str() command to show the data type for each variable
 ```{r}
 str(b)
 ```
+
