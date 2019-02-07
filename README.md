@@ -145,4 +145,3 @@ When you are done, use the str() command to show the data type for each variable
 ```{r}
 str(b)
 ```
-ADITIONAL CHANGE
