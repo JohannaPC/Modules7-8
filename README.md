@@ -90,12 +90,14 @@ Anthropoidea
 Strepsirhini <- list(Lorisoidea=c("Lorisidae", "Galagidae"), Lemuroidea=c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae"))
 Strepsirhini
 ```
-``{r}
+
+```{r}
 Primates <- list(Haplorhini=Haplorhini, Anthropoidea=Anthropoidea, Strepsirhini=Strepsirhini)
 Primates
 ```
 
 <span style="color:blue">***CHALLANGE-05:***</span>
+
 
 Store the following numbers as a 5 x 3 matrix: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill the matrix ROWWISE.
 
